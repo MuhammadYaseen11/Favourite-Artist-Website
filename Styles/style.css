@@ -1,0 +1,222 @@
+/* You should style your site by making use of Cascading Style Sheets. Specifically, you will be marked 
+on the following aspects:
+1. Your style rules should be in an external style file (with a .css extension) and linked to from 
+within your HTML files
+2. You must have styled your website in terms of layout/positioning, text, and content
+3. You must have demonstrated appropriate use of classes and IDs to style groups and 
+individual components
+4. Making our website responsive. */
+
+body{
+  background-image: url(../images/backgroundImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+nav{
+height: 25px;
+}
+.nav {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav-item {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.banner{
+  background-image: url(../images/arijit-singh-slide.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  color: white;
+}
+.heighlight{
+  margin-left: 10%;
+  
+}
+.banner h2, h3{
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+
+.wrapper{
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.heighlight{
+  font-size: large;
+}
+
+#left-col img{
+  border-radius: 200px;
+}
+
+.main-content{
+  text-align: center;
+  width: 100%;
+  float: right;
+  color: white;
+  padding: 35px;
+  font-size: 30px;
+  background-color: #00000070;
+}
+.main-content p{
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+}
+.main-content h2{
+  color: crimson;
+    border: 1px solid;
+}
+li{
+  list-style-type:none;
+}
+
+.footer{
+  height: 70px;
+  background: #333333;
+  display: flex;
+  justify-content: center;
+  color: white; 
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  margin: 2rem auto; 
+}
+
+.container img{
+  border-radius: 30px 30px 0px 0px;
+}
+figure{
+  width: 40%;
+  float: left;
+  height: 300px;
+}
+figcaption{
+  background-color: #04aa6d;
+  border-radius: 0px 0px 20px 20px;
+  text-align: center;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+
+
+/* JS StyleSheet */
+
+#form {
+  width: 300px;
+  margin: 16vh auto 0 auto;
+  padding: 50px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+#form h1 {
+  color: #0f2027;
+  text-align: center;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgb(41, 57, 194);
+  border: none;
+  border-radius: 4px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+border-radius: 4px;
+display: block;
+font-size: 12px;
+padding: 10px;
+width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+iframe{
+  width: 50%;
+  float: left;
+}
+
+/* Media Query */
+@media only screen and (max-width: 890px) {
+    figure{
+      width: 90%;
+      height: 300px;
+    }
+    iframe{
+      width: 100%;
+      height: 500px;
+    }
+    
+  
+}
