@@ -1,21 +1,16 @@
-/* You should style your site by making use of Cascading Style Sheets. Specifically, you will be marked 
-on the following aspects:
-1. Your style rules should be in an external style file (with a .css extension) and linked to from 
-within your HTML files
-2. You must have styled your website in terms of layout/positioning, text, and content
-3. You must have demonstrated appropriate use of classes and IDs to style groups and 
-individual components
-4. Making our website responsive. */
-
-body{
+/* General Styles */
+body {
   background-image: url(../images/backgroundImage.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
+  font-family: Arial, sans-serif;
 }
-nav{
-height: 25px;
+
+nav {
+  height: 25px;
 }
+
 .nav {
   list-style-type: none;
   margin: 0;
@@ -46,7 +41,7 @@ li a:hover:not(.active) {
   background-color: #04AA6D;
 }
 
-.banner{
+.banner {
   background-image: url(../images/arijit-singh-slide.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,17 +52,17 @@ li a:hover:not(.active) {
   align-items: center;
   color: white;
 }
-.heighlight{
+
+.heighlight {
   margin-left: 10%;
-  
 }
-.banner h2, h3{
+
+.banner h2, h3 {
   font-size: 30px;
   text-decoration: underline;
 }
 
-
-.wrapper{
+.wrapper {
   margin: 0 auto;
   padding: 10px;
   display: flex;
@@ -75,15 +70,8 @@ li a:hover:not(.active) {
   align-content: center;
   align-items: center;
 }
-.heighlight{
-  font-size: large;
-}
 
-#left-col img{
-  border-radius: 200px;
-}
-
-.main-content{
+.main-content {
   text-align: center;
   width: 100%;
   float: right;
@@ -92,25 +80,28 @@ li a:hover:not(.active) {
   font-size: 30px;
   background-color: #00000070;
 }
-.main-content p{
+
+.main-content p {
   width: 70%;
   margin: 0 auto;
   text-align: left;
 }
-.main-content h2{
+
+.main-content h2 {
   color: crimson;
-    border: 1px solid;
-}
-li{
-  list-style-type:none;
+  border: 1px solid;
 }
 
-.footer{
+li {
+  list-style-type: none;
+}
+
+.footer {
   height: 70px;
   background: #333333;
   display: flex;
   justify-content: center;
-  color: white; 
+  color: white;
 }
 
 .center {
@@ -119,18 +110,20 @@ li{
 
 .container {
   width: 90%;
-  margin: 2rem auto; 
+  margin: 2rem auto;
 }
 
-.container img{
+.container img {
   border-radius: 30px 30px 0px 0px;
 }
-figure{
+
+figure {
   width: 40%;
   float: left;
   height: 300px;
 }
-figcaption{
+
+figcaption {
   background-color: #04aa6d;
   border-radius: 0px 0px 20px 20px;
   text-align: center;
@@ -140,13 +133,10 @@ figcaption{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block; 
+  display: block;
 }
 
-
-
 /* JS StyleSheet */
-
 #form {
   width: 300px;
   margin: 16vh auto 0 auto;
@@ -178,11 +168,11 @@ figcaption{
 
 .input-control input {
   border: 2px solid #f0f0f0;
-border-radius: 4px;
-display: block;
-font-size: 12px;
-padding: 10px;
-width: 100%;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
 }
 
 .input-control input:focus {
@@ -202,21 +192,74 @@ width: 100%;
   font-size: 9px;
   height: 13px;
 }
-iframe{
-  width: 50%;
-  float: left;
+
+/* Video Grid Styles */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
-/* Media Query */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.favorite-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Favorites Page Styles */
+#favorite-songs-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#favorite-songs-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Responsive Design */
 @media only screen and (max-width: 890px) {
-    figure{
-      width: 90%;
-      height: 300px;
-    }
-    iframe{
-      width: 100%;
-      height: 500px;
-    }
-    
+  figure {
+    width: 90%;
+    height: 300px;
+  }
   
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-container {
+    padding-top: 56.25%;
+  }
 }

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arijit Singh Top Musics</title>
-<!-- Favicon image -->
-<link rel="icon" href="../images/favicon1.jpg" />
-<!-- linking stylesheet to html -->
-<link rel="stylesheet" href="../Styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arijit Singh Top Musics</title>
+    <!-- Favicon image -->
+    <link rel="icon" href="../images/favicon1.jpg" />
+    <!-- linking stylesheet to html -->
+    <link rel="stylesheet" href="../Styles/style.css">
+    <script src="../Js/javascript.js"></script>
 </head>
 <body>
     <nav>
@@ -14,11 +15,10 @@
             <li><a class="nav-item" href="Index.html">Home</a></li>
             <li><a href="../Html/Photos.html" class="nav-item"> Photos </a></li>
             <li><a href="../Html/Videos.html" class="active nav-item"> Videos </a></li>
-            <li><a href="../Html/Sign-In.html" class="nav-item"> Sign In</a></li>
+            <li><a href="../Html/Favorites.html" class="nav-item"> Favorites</a></li>
         </ul>
     </nav>
    
-
     <div class="banner">
         <div class="heighlight">
             <h3>Arijit Sung </h3>
@@ -26,26 +26,43 @@
         </div>
     </div>
 
-<div>
-    <iframe style="border: 0px;" src="https://www.youtube.com/embed/cs1e0fRyI18" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div>
-    <iframe style="border: 0px;" src="https://www.youtube.com/embed/MJyKN-8UncM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<div>
-    <iframe style="border: 0px;" src="https://www.youtube.com/embed/pIBoAh4OXhQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div>
-    <iframe style="border: 0px;" src="https://www.youtube.com/embed/HoCwa6gnmM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<div>
-    <iframe style="border: 0px;" src="https://www.youtube.com/embed/0uaE6BYAoWk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div>
-    <iframe style="border: 0px;" src="https://www.youtube.com/embed/ofTxceS4wLI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+    <div class="video-grid">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/cs1e0fRyI18" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="favorite-btn" data-song-id="1">
+                <img src="../images/favorite-unchecked.png" alt="Add to Favorites">
+            </button>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/MJyKN-8UncM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="favorite-btn" data-song-id="2">
+                <img src="../images/favorite-unchecked.png" alt="Add to Favorites">
+            </button>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/pIBoAh4OXhQ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="favorite-btn" data-song-id="3">
+                <img src="../images/favorite-unchecked.png" alt="Add to Favorites">
+            </button>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/HoCwa6gnmM0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="favorite-btn" data-song-id="4">
+                <img src="../images/favorite-unchecked.png" alt="Add to Favorites">
+            </button>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/0uaE6BYAoWk" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="favorite-btn" data-song-id="5">
+                <img src="../images/favorite-unchecked.png" alt="Add to Favorites">
+            </button>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ofTxceS4wLI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="favorite-btn" data-song-id="6">
+                <img src="../images/favorite-unchecked.png" alt="Add to Favorites">
+            </button>
+        </div>
+    </div>
 </body>
 </html>
