@@ -39,34 +39,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (iframeHTML) {
                     const listItem = document.createElement('li');
-                    listItem.innerHTML = iframeHTML;
+                    listItem.style.display = 'grid';
+                    listItem.style.gridTemplateColumns = '1fr auto';
+                    listItem.style.marginBottom = '15px';
+                    listItem.style.alignItems = 'center';
+
+                    const videoContainer = document.createElement('div');
+                    videoContainer.innerHTML = iframeHTML;
 
                     // Add "Remove from Favorites" button
                     const removeButton = document.createElement('button');
-                    removeButton.style.display = 'flex';
-                    removeButton.style.justifyContent = 'center';
-                    removeButton.style.alignItems = 'center';
-                    removeButton.style.width = '19%';
-                    removeButton.style.padding = '10px';
-
+                    removeButton.textContent = 'Remove from Favorites';
+                    removeButton.classList.add('remove-btn');
                     removeButton.style.backgroundColor = 'red';
                     removeButton.style.color = 'white';
                     removeButton.style.border = 'none';
                     removeButton.style.cursor = 'pointer';
+                    removeButton.style.padding = '10px 15px';
                     removeButton.style.borderRadius = '5px';
-                    removeButton.style.fontWeight = 'bold';
-                    removeButton.style.textTransform = 'uppercase';
-                    removeButton.style.letterSpacing = '1px';
                     removeButton.style.fontSize = '14px';
-                    removeButton.style.outline = 'none';
-                    removeButton.style.transition = 'background-color 0.3s';
-                    removeButton.textContent = 'Remove from Favorites';
-                    removeButton.classList.add('remove-btn');
+                    removeButton.style.fontWeight = 'bold';
+                    removeButton.style.marginLeft = '20px';
                     removeButton.addEventListener('click', () => {
                         localStorage.removeItem(songId);
                         updateFavoritesList();
                     });
 
+                    listItem.appendChild(videoContainer);
                     listItem.appendChild(removeButton);
                     favoriteSongsList.appendChild(listItem);
                 }
