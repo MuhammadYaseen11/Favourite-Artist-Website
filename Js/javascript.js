@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     listItem.style.display = 'grid';
                     listItem.style.gridTemplateColumns = '1fr auto';
                     listItem.style.marginBottom = '15px';
-                    listItem.style.alignItems = 'center';
+                    listItem.style.alignItems = 'center';//
 
                     const videoContainer = document.createElement('div');
                     videoContainer.innerHTML = iframeHTML;
